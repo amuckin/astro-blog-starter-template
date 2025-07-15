@@ -45,19 +45,32 @@ import { SITE_TITLE } from '../consts';
 <style>
 	header {
 		margin: 0;
-		padding: 0 1em;
-		background: white;
+		height: 250px;
+		padding: 2rem 1em;
+		background: 
+			linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+			url('/header-photo.jpg');
+		background-size: cover;
+		background-position: center bottom;
+		color: white;
 		box-shadow: 0 2px 8px rgba(var(--black), 5%);
 	}
+
 	h2 {
+		font-family: 'Outfit', sans-serif;
 		margin: 0;
-		font-size: 1em;
+		font-size: 2rem; /* or 32px */
+		color: #ffcc00; /* bright gold example */
 	}
 
-	h2 a,
-	h2 a.active {
+	h2 a {
 		text-decoration: none;
+		color: inherit; /* inherits from h2 so it's consistent */
 	}
+	h2 a:hover {
+	color: #ffaa00;
+	}
+
 	nav {
 		display: flex;
 		align-items: center;
@@ -75,7 +88,7 @@ import { SITE_TITLE } from '../consts';
 	}
 	.social-links,
 	.social-links a {
-		display: flex;
+		display: none;
 	}
 	@media (max-width: 720px) {
 		.social-links {

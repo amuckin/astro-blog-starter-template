@@ -5,7 +5,11 @@ import { SITE_TITLE } from '../consts';
 
 <header>
 	<nav>
-		<h2><a href="/">{SITE_TITLE}</a></h2>
+		<h2>  
+			<a href="/">
+			<img src="/mslf-mock-logo-02.png" alt="Morrisville Student Loan Fund Logo" style="height: 300px;" class="logo" />
+		  	</a>
+		</h2>
 		<div class="internal-links">
 			<HeaderLink href="/">Home</HeaderLink>
 			<HeaderLink href="/about">About</HeaderLink>
@@ -72,7 +76,7 @@ import { SITE_TITLE } from '../consts';
 
 	nav {
 		display: flex;
-		align-items: center;
+		align-items: flex-start;
 		justify-content: space-between;
 	}
 	nav a {
@@ -93,5 +97,11 @@ import { SITE_TITLE } from '../consts';
 		.social-links {
 			display: none;
 		}
+	}
+	.logo {
+	  display: block;
+	  height: 48px; /* or whatever size fits */
+	  margin-top: -130px; /* tweak to align to top */
+	  vertical-align: top;
 	}
 </style>
